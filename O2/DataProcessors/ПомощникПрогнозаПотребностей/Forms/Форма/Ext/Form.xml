@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ВыполнитьПрогноз" id="44">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ВыполнитьПрогноз</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Выполнить прогноз</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ВыполнитьПрогнозРасширеннаяПодсказка" id="45"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Группа1" id="46">
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="47"/>
+			<ChildItems>
+				<Page name="Основное" id="48">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основное</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основное</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ОсновноеРасширеннаяПодсказка" id="49"/>
+					<ChildItems>
+						<InputField name="ПериодПрогнозаМесяцев" id="1">
+							<DataPath>Объект.ПериодПрогнозаМесяцев</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ПериодПрогнозаМесяцевКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="ПериодПрогнозаМесяцевРасширеннаяПодсказка" id="3"/>
+						</InputField>
+						<Table name="ТЧРезультат" id="7">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ТЧРезультат</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТЧРезультатКонтекстноеМеню" id="8"/>
+							<AutoCommandBar name="ТЧРезультатКоманднаяПанель" id="9"/>
+							<ExtendedTooltip name="ТЧРезультатРасширеннаяПодсказка" id="10"/>
+							<SearchStringAddition name="ТЧРезультатСтрокаПоиска" id="11">
+								<AdditionSource>
+									<Item>ТЧРезультат</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЧРезультатСтрокаПоискаКонтекстноеМеню" id="12"/>
+								<ExtendedTooltip name="ТЧРезультатСтрокаПоискаРасширеннаяПодсказка" id="13"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТЧРезультатСостояниеПросмотра" id="14">
+								<AdditionSource>
+									<Item>ТЧРезультат</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЧРезультатСостояниеПросмотраКонтекстноеМеню" id="15"/>
+								<ExtendedTooltip name="ТЧРезультатСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТЧРезультатУправлениеПоиском" id="17">
+								<AdditionSource>
+									<Item>ТЧРезультат</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЧРезультатУправлениеПоискомКонтекстноеМеню" id="18"/>
+								<ExtendedTooltip name="ТЧРезультатУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ТЧРезультатНомерСтроки" id="20">
+									<DataPath>Объект.ТЧРезультат.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТЧРезультатНомерСтрокиКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="ТЧРезультатНомерСтрокиРасширеннаяПодсказка" id="22"/>
+								</LabelField>
+								<InputField name="ТЧРезультатМатериал" id="23">
+									<DataPath>Объект.ТЧРезультат.Материал</DataPath>
+									<Visible>false</Visible>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТЧРезультатМатериалКонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="ТЧРезультатМатериалРасширеннаяПодсказка" id="25"/>
+								</InputField>
+								<InputField name="ТЧРезультатНаименованиеМатериала" id="26">
+									<DataPath>Объект.ТЧРезультат.НаименованиеМатериала</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТЧРезультатНаименованиеМатериалаКонтекстноеМеню" id="27"/>
+									<ExtendedTooltip name="ТЧРезультатНаименованиеМатериалаРасширеннаяПодсказка" id="28"/>
+								</InputField>
+								<InputField name="ТЧРезультатМесяц" id="29">
+									<DataPath>Объект.ТЧРезультат.Месяц</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТЧРезультатМесяцКонтекстноеМеню" id="30"/>
+									<ExtendedTooltip name="ТЧРезультатМесяцРасширеннаяПодсказка" id="31"/>
+								</InputField>
+								<InputField name="ТЧРезультатТекущийОстаток" id="73">
+									<DataPath>Объект.ТЧРезультат.ТекущийОстаток</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧН=</v8:content>
+										</v8:item>
+									</Format>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧН=</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="ТЧРезультатТекущийОстатокКонтекстноеМеню" id="74"/>
+									<ExtendedTooltip name="ТЧРезультатТекущийОстатокРасширеннаяПодсказка" id="75"/>
+								</InputField>
+								<InputField name="ТЧРезультатПотребность" id="61">
+									<DataPath>Объект.ТЧРезультат.Потребность</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧН=</v8:content>
+										</v8:item>
+									</Format>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧН=</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="ТЧРезультатПотребностьКонтекстноеМеню" id="62"/>
+									<ExtendedTooltip name="ТЧРезультатПотребностьРасширеннаяПодсказка" id="63"/>
+								</InputField>
+								<InputField name="ТЧРезультатПроцентУверенности" id="64">
+									<DataPath>Объект.ТЧРезультат.ПроцентУверенности</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧДЦ=2; ЧФ=Ч%</v8:content>
+										</v8:item>
+									</Format>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧДЦ=2; ЧФ=Ч%</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="ТЧРезультатПроцентУверенностиКонтекстноеМеню" id="65"/>
+									<ExtendedTooltip name="ТЧРезультатПроцентУверенностиРасширеннаяПодсказка" id="66"/>
+								</InputField>
+								<InputField name="ТЧРезультатПрогнозОстатка" id="70">
+									<DataPath>Объект.ТЧРезультат.ПрогнозОстатка</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧН=</v8:content>
+										</v8:item>
+									</Format>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧН=</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="ТЧРезультатПрогнозОстаткаКонтекстноеМеню" id="71"/>
+									<ExtendedTooltip name="ТЧРезультатПрогнозОстаткаРасширеннаяПодсказка" id="72"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="Диаграмма" id="50">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Диаграмма</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Диаграмма</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ДиаграммаРасширеннаяПодсказка" id="51"/>
+					<ChildItems>
+						<ChartField name="ДиаграммаОстатков" id="58">
+							<DataPath>ДиаграммаОстатков</DataPath>
+							<ContextMenu name="ДиаграммаОстатковКонтекстноеМеню" id="59"/>
+							<ExtendedTooltip name="ДиаграммаОстатковРасширеннаяПодсказка" id="60"/>
+						</ChartField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПомощникПрогнозаПотребностей</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ДиаграммаОстатков" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Диаграмма остатков</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.2/data/chart">d5p1:Chart</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыполнитьПрогноз" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить прогноз</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить прогноз</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьПрогноз</Action>
+		</Command>
+	</Commands>
+</Form>

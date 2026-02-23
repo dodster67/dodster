@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<ButtonGroup name="ФормаГруппа1" id="21">
+				<ExtendedTooltip name="ФормаГруппа1РасширеннаяПодсказка" id="22"/>
+				<ChildItems>
+					<Button name="Сгенерировать" id="15">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Сгенерировать</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сгенерировать</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="СгенерироватьРасширеннаяПодсказка" id="16"/>
+					</Button>
+					<Button name="СформироватьСпецификации" id="19">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.СформироватьСпецификации</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сформировать спецификации</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="СформироватьСпецификацииРасширеннаяПодсказка" id="20"/>
+					</Button>
+					<Button name="СохранитьВБазу" id="17">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.СохранитьВБазу</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сохранить в базу</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="СохранитьВБазуРасширеннаяПодсказка" id="18"/>
+					</Button>
+				</ChildItems>
+			</ButtonGroup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="КоличествоИзделий" id="1">
+			<DataPath>Объект.КоличествоИзделий</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>КоличествоИзделий (0-100)</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="КоличествоИзделийКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КоличествоИзделийРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="ВидПроизводства" id="4">
+			<DataPath>Объект.ВидПроизводства</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ВидПроизводстваКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ВидПроизводстваРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="МинКоличествоМатериалов" id="7">
+			<DataPath>Объект.МинКоличествоМатериалов</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="МинКоличествоМатериаловКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="МинКоличествоМатериаловРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="МаксКоличествоМатериалов" id="10">
+			<DataPath>Объект.МаксКоличествоМатериалов</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="МаксКоличествоМатериаловКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="МаксКоличествоМатериаловРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<Table name="ТЧПредпросмотр" id="23">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ТЧПредпросмотр</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТЧПредпросмотрКонтекстноеМеню" id="24"/>
+			<AutoCommandBar name="ТЧПредпросмотрКоманднаяПанель" id="25"/>
+			<ExtendedTooltip name="ТЧПредпросмотрРасширеннаяПодсказка" id="26"/>
+			<SearchStringAddition name="ТЧПредпросмотрСтрокаПоиска" id="27">
+				<AdditionSource>
+					<Item>ТЧПредпросмотр</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТЧПредпросмотрСтрокаПоискаКонтекстноеМеню" id="28"/>
+				<ExtendedTooltip name="ТЧПредпросмотрСтрокаПоискаРасширеннаяПодсказка" id="29"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТЧПредпросмотрСостояниеПросмотра" id="30">
+				<AdditionSource>
+					<Item>ТЧПредпросмотр</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТЧПредпросмотрСостояниеПросмотраКонтекстноеМеню" id="31"/>
+				<ExtendedTooltip name="ТЧПредпросмотрСостояниеПросмотраРасширеннаяПодсказка" id="32"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТЧПредпросмотрУправлениеПоиском" id="33">
+				<AdditionSource>
+					<Item>ТЧПредпросмотр</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТЧПредпросмотрУправлениеПоискомКонтекстноеМеню" id="34"/>
+				<ExtendedTooltip name="ТЧПредпросмотрУправлениеПоискомРасширеннаяПодсказка" id="35"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ТЧПредпросмотрНомерСтроки" id="36">
+					<DataPath>Объект.ТЧПредпросмотр.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТЧПредпросмотрНомерСтрокиКонтекстноеМеню" id="37"/>
+					<ExtendedTooltip name="ТЧПредпросмотрНомерСтрокиРасширеннаяПодсказка" id="38"/>
+				</LabelField>
+				<InputField name="ТЧПредпросмотрНаименование" id="39">
+					<DataPath>Объект.ТЧПредпросмотр.Наименование</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТЧПредпросмотрНаименованиеКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="ТЧПредпросмотрНаименованиеРасширеннаяПодсказка" id="41"/>
+				</InputField>
+				<InputField name="ТЧПредпросмотрАртикул" id="42">
+					<DataPath>Объект.ТЧПредпросмотр.Артикул</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТЧПредпросмотрАртикулКонтекстноеМеню" id="43"/>
+					<ExtendedTooltip name="ТЧПредпросмотрАртикулРасширеннаяПодсказка" id="44"/>
+				</InputField>
+				<InputField name="ТЧПредпросмотрЕдиницаИзмерения" id="45">
+					<DataPath>Объект.ТЧПредпросмотр.ЕдиницаИзмерения</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТЧПредпросмотрЕдиницаИзмеренияКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="ТЧПредпросмотрЕдиницаИзмеренияРасширеннаяПодсказка" id="47"/>
+				</InputField>
+				<InputField name="ТЧПредпросмотрТипНоменклатуры" id="48">
+					<DataPath>Объект.ТЧПредпросмотр.ТипНоменклатуры</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТЧПредпросмотрТипНоменклатурыКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="ТЧПредпросмотрТипНоменклатурыРасширеннаяПодсказка" id="50"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ГенераторДанныхИзделий</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Сгенерировать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сгенерировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сгенерировать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Сгенерировать</Action>
+		</Command>
+		<Command name="СохранитьВБазу" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить в базу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить в базу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СохранитьВБазу</Action>
+		</Command>
+		<Command name="СформироватьСпецификации" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать спецификации</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать спецификации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СформироватьСпецификации</Action>
+		</Command>
+	</Commands>
+</Form>

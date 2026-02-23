@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="СгенерироватьЗаказы" id="47">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.СгенерироватьЗаказы</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>СгенерироватьЗаказы</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="СгенерироватьЗаказыРасширеннаяПодсказка" id="48"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ДатаНачала" id="1">
+			<DataPath>Объект.ДатаНачала</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДатаНачалаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ДатаНачалаРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="ДатаОкончания" id="4">
+			<DataPath>Объект.ДатаОкончания</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДатаОкончанияКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаОкончанияРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="КоличествоЗаказов" id="7">
+			<DataPath>Объект.КоличествоЗаказов</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="КоличествоЗаказовКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="КоличествоЗаказовРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<CheckBoxField name="АвтоСозданиеЗакупки" id="10">
+			<DataPath>Объект.АвтоСозданиеЗакупки</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="АвтоСозданиеЗакупкиКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="АвтоСозданиеЗакупкиРасширеннаяПодсказка" id="12"/>
+		</CheckBoxField>
+		<CheckBoxField name="АвтоСозданиеВыпуска" id="13">
+			<DataPath>Объект.АвтоСозданиеВыпуска</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="АвтоСозданиеВыпускаКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="АвтоСозданиеВыпускаРасширеннаяПодсказка" id="15"/>
+		</CheckBoxField>
+		<Table name="ТЧРезультат" id="16">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ТЧРезультат</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТЧРезультатКонтекстноеМеню" id="17"/>
+			<AutoCommandBar name="ТЧРезультатКоманднаяПанель" id="18"/>
+			<ExtendedTooltip name="ТЧРезультатРасширеннаяПодсказка" id="19"/>
+			<SearchStringAddition name="ТЧРезультатСтрокаПоиска" id="20">
+				<AdditionSource>
+					<Item>ТЧРезультат</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТЧРезультатСтрокаПоискаКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="ТЧРезультатСтрокаПоискаРасширеннаяПодсказка" id="22"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТЧРезультатСостояниеПросмотра" id="23">
+				<AdditionSource>
+					<Item>ТЧРезультат</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТЧРезультатСостояниеПросмотраКонтекстноеМеню" id="24"/>
+				<ExtendedTooltip name="ТЧРезультатСостояниеПросмотраРасширеннаяПодсказка" id="25"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТЧРезультатУправлениеПоиском" id="26">
+				<AdditionSource>
+					<Item>ТЧРезультат</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТЧРезультатУправлениеПоискомКонтекстноеМеню" id="27"/>
+				<ExtendedTooltip name="ТЧРезультатУправлениеПоискомРасширеннаяПодсказка" id="28"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ТЧРезультатНомерСтроки" id="29">
+					<DataPath>Объект.ТЧРезультат.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТЧРезультатНомерСтрокиКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ТЧРезультатНомерСтрокиРасширеннаяПодсказка" id="31"/>
+				</LabelField>
+				<InputField name="ТЧРезультатНомерЗаказа" id="32">
+					<DataPath>Объект.ТЧРезультат.НомерЗаказа</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТЧРезультатНомерЗаказаКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ТЧРезультатНомерЗаказаРасширеннаяПодсказка" id="34"/>
+				</InputField>
+				<InputField name="ТЧРезультатДатаЗаказа" id="35">
+					<DataPath>Объект.ТЧРезультат.ДатаЗаказа</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТЧРезультатДатаЗаказаКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="ТЧРезультатДатаЗаказаРасширеннаяПодсказка" id="37"/>
+				</InputField>
+				<InputField name="ТЧРезультатИзделие" id="38">
+					<DataPath>Объект.ТЧРезультат.Изделие</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТЧРезультатИзделиеКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ТЧРезультатИзделиеРасширеннаяПодсказка" id="40"/>
+				</InputField>
+				<InputField name="ТЧРезультатКоличество" id="41">
+					<DataPath>Объект.ТЧРезультат.Количество</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТЧРезультатКоличествоКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="ТЧРезультатКоличествоРасширеннаяПодсказка" id="43"/>
+				</InputField>
+				<InputField name="ТЧРезультатСтатус" id="44">
+					<DataPath>Объект.ТЧРезультат.Статус</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТЧРезультатСтатусКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="ТЧРезультатСтатусРасширеннаяПодсказка" id="46"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ГенераторЗаказовПроизводства</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СгенерироватьЗаказы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сгенерировать заказы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сгенерировать заказы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СгенерироватьЗаказы</Action>
+		</Command>
+	</Commands>
+</Form>
