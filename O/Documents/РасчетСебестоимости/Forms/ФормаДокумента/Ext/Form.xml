@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Номенклатура" id="7">
+			<DataPath>Объект.Номенклатура</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ChoiceParameters>
+				<app:item name="Отбор.Тип">
+					<app:value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xr:DesignTimeRef">Enum.Тип.EnumValue.Готовая_продукция</Value>
+					</app:value>
+				</app:item>
+			</ChoiceParameters>
+			<ContextMenu name="НоменклатураКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="НоменклатураРасширеннаяПодсказка" id="9"/>
+			<Events>
+				<Event name="OnChange">НоменклатураПриИзменении</Event>
+			</Events>
+		</InputField>
+		<Pages name="Группа1" id="44">
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="45"/>
+			<ChildItems>
+				<Page name="СебестоимостьТЧ" id="46">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Себестоимость ТЧ</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Себестоимость ТЧ</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СебестоимостьТЧРасширеннаяПодсказка" id="47"/>
+					<ChildItems>
+						<Table name="Себестоимость" id="10">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Себестоимость</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СебестоимостьКонтекстноеМеню" id="11"/>
+							<AutoCommandBar name="СебестоимостьКоманднаяПанель" id="12"/>
+							<ExtendedTooltip name="СебестоимостьРасширеннаяПодсказка" id="13"/>
+							<SearchStringAddition name="СебестоимостьСтрокаПоиска" id="14">
+								<AdditionSource>
+									<Item>Себестоимость</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СебестоимостьСтрокаПоискаКонтекстноеМеню" id="15"/>
+								<ExtendedTooltip name="СебестоимостьСтрокаПоискаРасширеннаяПодсказка" id="16"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СебестоимостьСостояниеПросмотра" id="17">
+								<AdditionSource>
+									<Item>Себестоимость</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СебестоимостьСостояниеПросмотраКонтекстноеМеню" id="18"/>
+								<ExtendedTooltip name="СебестоимостьСостояниеПросмотраРасширеннаяПодсказка" id="19"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СебестоимостьУправлениеПоиском" id="20">
+								<AdditionSource>
+									<Item>Себестоимость</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СебестоимостьУправлениеПоискомКонтекстноеМеню" id="21"/>
+								<ExtendedTooltip name="СебестоимостьУправлениеПоискомРасширеннаяПодсказка" id="22"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СебестоимостьНомерСтроки" id="23">
+									<DataPath>Объект.Себестоимость.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СебестоимостьНомерСтрокиКонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="СебестоимостьНомерСтрокиРасширеннаяПодсказка" id="25"/>
+								</LabelField>
+								<InputField name="СебестоимостьМатериал" id="26">
+									<DataPath>Объект.Себестоимость.Материал</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ChoiceParameters>
+										<app:item name="Отбор.Тип">
+											<app:value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="v8:FixedArray">
+													<v8:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation/>
+														<Value xsi:type="xr:DesignTimeRef">Enum.Тип.EnumValue.Сырье</Value>
+													</v8:Value>
+													<v8:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation/>
+														<Value xsi:type="xr:DesignTimeRef">Enum.Тип.EnumValue.Полуфабрикат</Value>
+													</v8:Value>
+												</Value>
+											</app:value>
+										</app:item>
+									</ChoiceParameters>
+									<ContextMenu name="СебестоимостьМатериалКонтекстноеМеню" id="27"/>
+									<ExtendedTooltip name="СебестоимостьМатериалРасширеннаяПодсказка" id="28"/>
+								</InputField>
+								<InputField name="СебестоимостьКоличество" id="29">
+									<DataPath>Объект.Себестоимость.Количество</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="СебестоимостьКоличествоКонтекстноеМеню" id="30"/>
+									<ExtendedTooltip name="СебестоимостьКоличествоРасширеннаяПодсказка" id="31"/>
+									<Events>
+										<Event name="OnChange">СебестоимостьКоличествоПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="СебестоимостьЦена" id="32">
+									<DataPath>Объект.Себестоимость.Цена</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="СебестоимостьЦенаКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="СебестоимостьЦенаРасширеннаяПодсказка" id="34"/>
+									<Events>
+										<Event name="OnChange">СебестоимостьЦенаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="СебестоимостьСумма" id="35">
+									<DataPath>Объект.Себестоимость.Сумма</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="СебестоимостьСуммаКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="СебестоимостьСуммаРасширеннаяПодсказка" id="37"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ТрудыТЧ" id="48">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Труды ТЧ</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Труды ТЧ</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ТрудыТЧРасширеннаяПодсказка" id="49"/>
+					<ChildItems>
+						<Table name="Труды" id="50">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Труды</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТрудыКонтекстноеМеню" id="51"/>
+							<AutoCommandBar name="ТрудыКоманднаяПанель" id="52"/>
+							<ExtendedTooltip name="ТрудыРасширеннаяПодсказка" id="53"/>
+							<SearchStringAddition name="ТрудыСтрокаПоиска" id="54">
+								<AdditionSource>
+									<Item>Труды</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТрудыСтрокаПоискаКонтекстноеМеню" id="55"/>
+								<ExtendedTooltip name="ТрудыСтрокаПоискаРасширеннаяПодсказка" id="56"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТрудыСостояниеПросмотра" id="57">
+								<AdditionSource>
+									<Item>Труды</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТрудыСостояниеПросмотраКонтекстноеМеню" id="58"/>
+								<ExtendedTooltip name="ТрудыСостояниеПросмотраРасширеннаяПодсказка" id="59"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТрудыУправлениеПоиском" id="60">
+								<AdditionSource>
+									<Item>Труды</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТрудыУправлениеПоискомКонтекстноеМеню" id="61"/>
+								<ExtendedTooltip name="ТрудыУправлениеПоискомРасширеннаяПодсказка" id="62"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ТрудыНомерСтроки" id="63">
+									<DataPath>Объект.Труды.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТрудыНомерСтрокиКонтекстноеМеню" id="64"/>
+									<ExtendedTooltip name="ТрудыНомерСтрокиРасширеннаяПодсказка" id="65"/>
+								</LabelField>
+								<InputField name="ТрудыВидРаботы" id="66">
+									<DataPath>Объект.Труды.ВидРаботы</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТрудыВидРаботыКонтекстноеМеню" id="67"/>
+									<ExtendedTooltip name="ТрудыВидРаботыРасширеннаяПодсказка" id="68"/>
+								</InputField>
+								<InputField name="ТрудыТрудозатраты" id="69">
+									<DataPath>Объект.Труды.Трудозатраты</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТрудыТрудозатратыКонтекстноеМеню" id="70"/>
+									<ExtendedTooltip name="ТрудыТрудозатратыРасширеннаяПодсказка" id="71"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.РасчетСебестоимости</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>
