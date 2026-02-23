@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<HTTPService uuid="4b697851-d9f2-4721-9a52-dbb1c4a67041">
+		<Properties>
+			<Name>ОбменДанными</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обмен данными</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<RootURL>services</RootURL>
+			<ReuseSessions>AutoUse</ReuseSessions>
+			<SessionMaxAge>20</SessionMaxAge>
+		</Properties>
+		<ChildObjects>
+			<URLTemplate uuid="30a65988-5573-44e8-907d-14d3a57485d6">
+				<Properties>
+					<Name>Номенклатура</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номенклатура</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/tov</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="159e7955-d980-46f0-a40c-ca5895222408">
+						<Properties>
+							<Name>ПолучитьНоменклатуру</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Получить номенклатуру</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>НоменклатураПолучитьНоменклатуру</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="0f0acfca-4001-42b8-a66e-65b705a5c465">
+				<Properties>
+					<Name>Бригада</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Бригада</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/bri</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="8755c284-7908-45c3-8f42-b13365f9b5fc">
+						<Properties>
+							<Name>ПолучитьБригаду</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Получить бригаду</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>БригадаПолучитьБригаду</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="8f1387c1-fb19-4492-b3dd-1bca8566f858">
+				<Properties>
+					<Name>Этапы</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Этапы</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/uta</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="1c48655b-7a70-445b-b3ac-b200f0ef0bc5">
+						<Properties>
+							<Name>ПолучитьЭтапы</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Получить этапы</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>ЭтапыПолучитьЭтапы</Handler>
+						</Properties>
+					</Method>
+					<Method uuid="c3b97dd9-b164-40cb-a745-38b3883dc556">
+						<Properties>
+							<Name>ЗаписатьЭтапы</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Записать этапы</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>PUT</HTTPMethod>
+							<Handler>ЭтапыЗаписатьЭтапы</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="c05d09b7-f201-4792-b373-5ee41c012abf">
+				<Properties>
+					<Name>Перенос</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Перенос</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/per</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="b09e9d19-ba5d-4453-8b4d-22aa2573c8a9">
+						<Properties>
+							<Name>ЗаписатьПеренос</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Записать перенос</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>PUT</HTTPMethod>
+							<Handler>ПереносЗаписатьПеренос</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="cbad7c9b-3545-4cc1-87e2-7b277747f76e">
+				<Properties>
+					<Name>Брак</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Брак</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/brak</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="00c07ffd-3711-46bb-8ca2-f1242a120981">
+						<Properties>
+							<Name>ЗаписатьБрак</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Записать брак</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>PUT</HTTPMethod>
+							<Handler>БракЗаписатьБрак</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+		</ChildObjects>
+	</HTTPService>
+</MetaDataObject>
