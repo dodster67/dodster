@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="СделатьФото" id="44">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.СделатьФото</CommandName>
+				<ExtendedTooltip name="СделатьФотоРасширеннаяПодсказка" id="45"/>
+			</Button>
+			<Button name="ВыбратьИзГалереи" id="46">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ВыбратьИзГалереи</CommandName>
+				<ExtendedTooltip name="ВыбратьИзГалереиРасширеннаяПодсказка" id="47"/>
+			</Button>
+			<Button name="ДобавитьЗапись" id="70">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ДобавитьЗапись</CommandName>
+				<ExtendedTooltip name="ДобавитьЗаписьРасширеннаяПодсказка" id="71"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ЭтапПроизводства" id="7">
+			<DataPath>Объект.ЭтапПроизводства</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ЭтапПроизводстваКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ЭтапПроизводстваРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="Изделие" id="10">
+			<DataPath>Объект.Изделие</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ИзделиеКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ИзделиеРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="КоличествоБрака" id="13">
+			<DataPath>Объект.КоличествоБрака</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="КоличествоБракаКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="КоличествоБракаРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="ПричинаБрака" id="16">
+			<DataPath>Объект.ПричинаБрака</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ПричинаБракаКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ПричинаБракаРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="Бригада" id="19">
+			<DataPath>Объект.Бригада</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="БригадаКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="БригадаРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<InputField name="Комментарий" id="22">
+			<DataPath>1/0:bac0b08e-86a3-4512-ba41-af80199da5af</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<Table name="ФотоБрака" id="48">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ФотоБрака</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ФотоБракаКонтекстноеМеню" id="49"/>
+			<AutoCommandBar name="ФотоБракаКоманднаяПанель" id="50"/>
+			<ExtendedTooltip name="ФотоБракаРасширеннаяПодсказка" id="51"/>
+			<SearchStringAddition name="ФотоБракаСтрокаПоиска" id="52">
+				<AdditionSource>
+					<Item>ФотоБрака</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ФотоБракаСтрокаПоискаКонтекстноеМеню" id="53"/>
+				<ExtendedTooltip name="ФотоБракаСтрокаПоискаРасширеннаяПодсказка" id="54"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ФотоБракаСостояниеПросмотра" id="55">
+				<AdditionSource>
+					<Item>ФотоБрака</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ФотоБракаСостояниеПросмотраКонтекстноеМеню" id="56"/>
+				<ExtendedTooltip name="ФотоБракаСостояниеПросмотраРасширеннаяПодсказка" id="57"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ФотоБракаУправлениеПоиском" id="58">
+				<AdditionSource>
+					<Item>ФотоБрака</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ФотоБракаУправлениеПоискомКонтекстноеМеню" id="59"/>
+				<ExtendedTooltip name="ФотоБракаУправлениеПоискомРасширеннаяПодсказка" id="60"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ФотоБракаНомерСтроки" id="61">
+					<DataPath>Объект.ФотоБрака.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ФотоБракаНомерСтрокиКонтекстноеМеню" id="62"/>
+					<ExtendedTooltip name="ФотоБракаНомерСтрокиРасширеннаяПодсказка" id="63"/>
+				</LabelField>
+				<InputField name="ФотоБракаАдресФото" id="72">
+					<DataPath>Объект.ФотоБрака.АдресФото</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ФотоБракаАдресФотоКонтекстноеМеню" id="73"/>
+					<ExtendedTooltip name="ФотоБракаАдресФотоРасширеннаяПодсказка" id="74"/>
+				</InputField>
+				<InputField name="ФотоБракаКомментарий" id="64">
+					<DataPath>Объект.ФотоБрака.Комментарий</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ФотоБракаКомментарийКонтекстноеМеню" id="65"/>
+					<ExtendedTooltip name="ФотоБракаКомментарийРасширеннаяПодсказка" id="66"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.АктОБраке</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СделатьФото" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сделать фото</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сделать фото</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СделатьФото</Action>
+		</Command>
+		<Command name="ВыбратьИзГалереи" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать из галереи</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать из галереи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыбратьИзГалереи</Action>
+		</Command>
+		<Command name="ДобавитьЗапись" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить запись</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить запись</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Отправить</Action>
+		</Command>
+	</Commands>
+</Form>
