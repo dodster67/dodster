@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<Table name="СписокИзделий" id="7">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.СписокИзделий</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СписокИзделийКонтекстноеМеню" id="8"/>
+			<AutoCommandBar name="СписокИзделийКоманднаяПанель" id="9"/>
+			<ExtendedTooltip name="СписокИзделийРасширеннаяПодсказка" id="10"/>
+			<SearchStringAddition name="СписокИзделийСтрокаПоиска" id="11">
+				<AdditionSource>
+					<Item>СписокИзделий</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокИзделийСтрокаПоискаКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="СписокИзделийСтрокаПоискаРасширеннаяПодсказка" id="13"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокИзделийСостояниеПросмотра" id="14">
+				<AdditionSource>
+					<Item>СписокИзделий</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокИзделийСостояниеПросмотраКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="СписокИзделийСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокИзделийУправлениеПоиском" id="17">
+				<AdditionSource>
+					<Item>СписокИзделий</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокИзделийУправлениеПоискомКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="СписокИзделийУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="СписокИзделийНомерСтроки" id="20">
+					<DataPath>Объект.СписокИзделий.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокИзделийНомерСтрокиКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="СписокИзделийНомерСтрокиРасширеннаяПодсказка" id="22"/>
+				</LabelField>
+				<InputField name="СписокИзделийНоменклатура" id="23">
+					<DataPath>Объект.СписокИзделий.Номенклатура</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="СписокИзделийНоменклатураКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="СписокИзделийНоменклатураРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="СписокИзделийКоличество" id="26">
+					<DataPath>Объект.СписокИзделий.Количество</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="СписокИзделийКоличествоКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="СписокИзделийКоличествоРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="СписокИзделийЕдиницаИзмерения" id="29">
+					<DataPath>Объект.СписокИзделий.ЕдиницаИзмерения</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="СписокИзделийЕдиницаИзмеренияКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="СписокИзделийЕдиницаИзмеренияРасширеннаяПодсказка" id="31"/>
+				</InputField>
+				<InputField name="СписокИзделийСпецификации" id="32">
+					<DataPath>Объект.СписокИзделий.Спецификации</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="СписокИзделийСпецификацииКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="СписокИзделийСпецификацииРасширеннаяПодсказка" id="34"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.Заказ</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>
